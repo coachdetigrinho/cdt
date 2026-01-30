@@ -1,0 +1,49 @@
+:root {
+    --bg-deep: #050505;
+    --bg-card: #0f0f12;
+    --border-color: #1e1e22;
+    --accent-blue: #0066ff;
+    --neon-green: #00ff88;
+    --neon-red: #ff3b3b;
+    --text-main: #e2e2e6;
+    --text-dim: #66666e;
+}
+
+.bg-deep { background-color: var(--bg-deep); }
+.bg-card { background-color: var(--bg-card); }
+.border-border-color { border-color: var(--border-color); }
+.text-main { color: var(--text-main); }
+.text-dim { color: var(--text-dim); }
+.text-accent-blue { color: var(--accent-blue); }
+.bg-accent-blue { background-color: var(--accent-blue); }
+.text-neon-green { color: var(--neon-green); }
+.text-neon-red { color: var(--neon-red); }
+
+body { font-family: 'Inter', sans-serif; }
+h1, h2, h3, .font-display { font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -0.05em; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* Ticker Animation */
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.ticker-animate {
+    display: flex;
+    white-space: nowrap;
+    animation: ticker 40s linear infinite;
+}
+
+/* Links */
+a { text-decoration: none; transition: color 0.2s; }
+a:hover { color: var(--accent-blue); }
+
+/* Inputs e Forms */
+input, select, textarea {
+    background: #141418;
+    border: 1px solid #2a2a30;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+}
+input:focus { outline: 2px solid var(--accent-blue); border-color: transparent; }

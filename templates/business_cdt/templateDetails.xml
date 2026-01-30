@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" version="4.0" client="site" method="upgrade">
+	<name>BusinessCDT</name>
+	<version>2.2.0</version>
+	<creationDate>Janeiro 2026</creationDate>
+	<author>Rafael Abreu</author>
+	<authorEmail>arpmaia@gmail.com</authorEmail>
+	<copyright>Copyright (C) 2026 BusinessCDT</copyright>
+	<description>Simple Page Template Gold</description>
+	
+    <files>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>html</folder> <!-- Pasta dos Overrides -->
+        <filename>sinais.json</filename>
+	</files>
+	
+    <positions>
+		<position>top-ticker</position>
+		<position>menu</position>
+		<position>user-actions</position>
+		<position>hero</position>
+		<position>breadcrumbs</position>
+		<position>sidebar</position>
+		<position>seo-grid</position>
+		<position>footer</position>
+	</positions>
+    
+    <config>
+		<fields name="params">
+            <!-- Aqui podes adicionar opções no futuro -->
+		</fields>
+	</config>
+</extension>

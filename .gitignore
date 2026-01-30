@@ -1,0 +1,7 @@
+configuration.php
+
+# Cache e Logs
+/cache/*
+/administrator/cache/*
+/logs/*
+/tmp/*

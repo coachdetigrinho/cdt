@@ -1,0 +1,118 @@
+/* --- IMPORTAÇÃO DE FONTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+/* --- SISTEMA DE CORES (Dark & Light) --- */
+
+/* Padrão (Dark Mode - Estilo Titan) */
+:root {
+    --bg-body: #050505;
+    --bg-card: #0f0f0f;
+    --bg-header: rgba(5, 5, 5, 0.95);
+    --border-color: #262626;
+    --text-main: #e5e5e5;
+    --text-muted: #9ca3af;
+    --accent: #FFD700;      /* Dourado */
+    --accent-hover: #b89c00;
+    --success: #00ff9d;     /* Verde Neon */
+    --danger: #ff3b3b;      /* Vermelho Neon */
+    --ticker-bg: #000000;
+}
+
+/* Modo Claro (Light Mode - Estilo Corporate) */
+[data-theme="light"] {
+    --bg-body: #f3f4f6;     /* Cinza Gelo */
+    --bg-card: #ffffff;     /* Branco Puro */
+    --bg-header: rgba(255, 255, 255, 0.95);
+    --border-color: #e5e7eb;
+    --text-main: #1f2937;   /* Cinza Escuro */
+    --text-muted: #6b7280;
+    --accent: #2563eb;      /* Azul Royal */
+    --accent-hover: #1d4ed8;
+    --success: #059669;
+    --danger: #dc2626;
+    --ticker-bg: #1e3a8a;
+}
+
+/* --- APLICAÇÃO GLOBAL --- */
+body {
+    background-color: var(--bg-body) !important;
+    color: var(--text-main) !important;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a { text-decoration: none; }
+
+/* --- TIPOGRAFIA PERSONALIZADA --- */
+.font-brand { font-family: 'Orbitron', sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+
+/* --- COMPONENTES DE DESIGN --- */
+
+/* Links no Texto */
+.text-link {
+    color: var(--accent);
+    border-bottom: 1px solid rgba(125, 125, 125, 0.3);
+    transition: all 0.3s;
+    font-weight: 600;
+}
+.text-link:hover {
+    border-bottom-color: var(--accent);
+    opacity: 0.8;
+}
+
+/* Cartões (Cards) */
+.card-light, .card-titan {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.card-light:hover, .card-titan:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--accent);
+    color: #fff; /* Texto sempre branco para contraste no azul */
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+[data-theme="dark"] .btn-primary {
+    color: #000; /* Texto preto no dourado */
+}
+
+.btn-primary:hover {
+    filter: brightness(110%);
+    transform: scale(1.02);
+}
+
+/* Citações (Blockquote) */
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+    background: linear-gradient(90deg, var(--bg-card) 0%, transparent 100%);
+    color: var(--text-main);
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Ticker Animation */
+.ticker-animate { 
+    display: inline-flex; 
+    animation: ticker 40s linear infinite; 
+    white-space: nowrap; 
+}
+@keyframes ticker { 
+    0% { transform: translateX(0); } 
+    100% { transform: translateX(-50%); } 
+}
+```
+```eof
