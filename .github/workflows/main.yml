@@ -3,7 +3,7 @@ name: Deploy via FTP
 on:
   push:
     branches:
-      - main  # O deploy só acontece quando você envia para a branch main
+      - main
 
 jobs:
   web-deploy:
@@ -19,8 +19,14 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/  # Caminho da pasta no servidor
+          server-dir: public_html/
+          # Opções para evitar travamentos no cPanel:
+          protocol: ftp
+          port: 21
+          passive: true
+          # Arquivos para ignorar
           exclude: |
             **/.git*
             **/.github*
+            **/node_modules/**
             configuration.php
